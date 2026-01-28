@@ -1,2 +1,6 @@
+# agent
 google-adk==1.23.0
 google-adk[a2a]==1.23.0
+
+# tools
+fastmcp==2.14.4
