@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "adk web",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "google.adk.cli",
+            "cwd": "${workspaceFolder}",
+            "envFile": "${workspaceFolder}/google_drive_agent/.env",
+            "justMyCode": false,
+            "args": [
+                "web",
+                "--no-reload",
+                "--log_level",
+                "debug",
+            ]
+        }
+    ]
+}

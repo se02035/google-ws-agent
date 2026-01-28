@@ -1,0 +1,6 @@
+.env
+.ngrok
+
+.adk
+.venv
+__pycache__
