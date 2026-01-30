@@ -87,12 +87,12 @@ mcp_filesystem_tool = McpToolset(
 )
 
 # # 2. Custom web server (remote/localhost) - currency exchange
-# MCP_SERVER_URL_CURRENCY_CONVERTER = f"http://{os.getenv("MCP_SERVER_URL_CURRENCY_HOST")}:{os.getenv("MCP_SERVER_CURRENCY_CONVERTER_PORT")}/mcp"
-# mcp_currency_conversion = McpToolset(
-#     connection_params=StreamableHTTPConnectionParams(
-#         url=MCP_SERVER_URL_CURRENCY_CONVERTER
-#     )
-# )
+MCP_SERVER_URL_CURRENCY_CONVERTER = f"http://{os.getenv("MCP_SERVER_URL_CURRENCY_HOST")}:{os.getenv("MCP_SERVER_CURRENCY_CONVERTER_PORT")}/mcp"
+mcp_currency_conversion = McpToolset(
+    connection_params=StreamableHTTPConnectionParams(
+        url=MCP_SERVER_URL_CURRENCY_CONVERTER
+    )
+)
 
 # 3. Custom web server (remote/localhost) - using Gemini CLI
 mcp_geminicli_tool = McpToolset(
@@ -148,7 +148,7 @@ root_agent = Agent(
         connector_tool,  
         mcp_filesystem_tool, 
         mcp_geminicli_tool, 
-        # mcp_currency_conversion
+        mcp_currency_conversion
     ],
     before_agent_callback=before_agent_callback,
     before_model_callback=before_model_callback,
