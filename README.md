@@ -41,9 +41,7 @@ curl http://$A2A_HOST:$A2A_PORT/.well-known/agent-card.json
     echo $A2A_AGENT_CARD
     ```
 
-## Update agent card for Gemini Enterprise
-```sh
+## Register Gemini Enterprise A2A agent
 
-
-
-```
+1. In your Gemini Enterprise instance add a new A2A agent. Use the agent card json of your locally running agent
+    > Attention: Replace the localhost host URI with the public (ngrok) one (which was retrieve in the previous step) 
